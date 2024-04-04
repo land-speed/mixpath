@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+    script-src 'self' https://d3js.org"" />
+    <title>mixpath</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>mixpath</h1>
+    <div class="box" id="intro-box">
+      <div class="box">
+        <div class="box-button">
+          <button id="choose-file">Choose Directory...</button>
+          <span id="file-path"></span>
+          <span class="space"></span>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="clear"></div>
+
+      <div class="box">
+        <label for="quantity">BPM Tolerance (between 1 and 5):</label>
+        <input
+          type="number"
+          id="bpm-tolerance"
+          name="bpm-tolerance"
+          min="1"
+          max="5"
+          value="1"
+        />
+      </div>
+
+      <div class="box">
+        <span class="clear"></span>
+        <label for="quantity">Key Tolerance (between 1 and 5):</label>
+        <input
+          type="number"
+          id="key-tolerance"
+          name="key-tolerance"
+          min="1"
+          max="5"
+          value="1"
+        />
+      </div>
+
+      <div class="clear"></div>
+      <div class="clear"></div>
+
+      <div class="box">
+        <div class="box-button">
+          <button id="run" disabled>Run</button>
+          <span class="space"></span>
+        </div>
+        <div class="box-button">
+          <button id="demo">Run demo</button>
+        </div>
+      </div>
+
+      <span class="space"></span>
+      <span class="space"></span>
+      <span class="space"></span>
+    </div>
+    <div class="box" id="graph-control">
+      <div class="box-button">
+        <button id="centre">Re-centre</button>
+        <span class="space"></span>
+      </div>
+      <div class="box-button">
+        <button id="back-intro">Back</button>
+        <span class="space"></span>
+      </div>
+    </div>
+    <script type="module" src="./renderer.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </body>
+</html>
